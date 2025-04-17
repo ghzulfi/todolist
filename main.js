@@ -1,67 +1,64 @@
 let inputTask = document.getElementById("inputTask");
 let addTaskButton = document.getElementById("addTaskButton");
 
-      // modal
-      let div1Modal = document.createElement("div");
-      div1Modal.className = "modal fade";
-      div1Modal.id = "exampleModal2";
-      div1Modal.tabIndex = "-1";
-      div1Modal.setAttribute("aria-labelledby", "exampleModalLabel");
-      div1Modal.setAttribute("aria-hidden", "true");
-      let div2Modal = document.createElement("div");
-      div2Modal.className = "modal-dialog modal-dialog-centered";
-      let div3Modal = document.createElement("div");
-      div3Modal.className = "modal-content";
-      let div4Modal = document.createElement("div");
-      div4Modal.className = "modal-header";
-      let h1Modal = document.createElement("h1");
-      h1Modal.className = "modal-title fs-5";
-      h1Modal.id = "exampleModalLabel";
-      h1Modal.textContent = "Delete";
-      let button1Close = document.createElement("button");
-      button1Close.type = "button";
-      button1Close.className = "btn-close";
-      button1Close.setAttribute("data-bs-dismiss", "modal");
-      button1Close.setAttribute("aria-label", "Close");
+// modal
+let div1Modal = document.createElement("div");
+div1Modal.className = "modal fade";
+div1Modal.id = "exampleModal2";
+div1Modal.tabIndex = "-1";
+div1Modal.setAttribute("aria-labelledby", "exampleModalLabel");
+div1Modal.setAttribute("aria-hidden", "true");
+let div2Modal = document.createElement("div");
+div2Modal.className = "modal-dialog modal-dialog-centered";
+let div3Modal = document.createElement("div");
+div3Modal.className = "modal-content";
+let div4Modal = document.createElement("div");
+div4Modal.className = "modal-header";
+let h1Modal = document.createElement("h1");
+h1Modal.className = "modal-title fs-5";
+h1Modal.id = "exampleModalLabel";
+h1Modal.textContent = "Delete";
+let button1Close = document.createElement("button");
+button1Close.type = "button";
+button1Close.className = "btn-close";
+button1Close.setAttribute("data-bs-dismiss", "modal");
+button1Close.setAttribute("aria-label", "Close");
 
-      div4Modal.appendChild(h1Modal);
-      div4Modal.appendChild(button1Close);
+div4Modal.appendChild(h1Modal);
+div4Modal.appendChild(button1Close);
 
-      let div5Modal = document.createElement("div");
-      div5Modal.className = "modal-body";
-      div5Modal.textContent = "Are you sure you want to delete this task?";
+let div5Modal = document.createElement("div");
+div5Modal.className = "modal-body";
+div5Modal.textContent = "Are you sure you want to delete this task?";
 
-      let div6Modal = document.createElement("div");
-      div6Modal.className = "modal-footer";
-      let button2Close = document.createElement("button");
-      button2Close.type = "button";
-      button2Close.className = "btn btn-secondary";
-      button2Close.setAttribute("data-bs-dismiss", "modal");
-      button2Close.textContent = "Cancel";
-      let button1Delete = document.createElement("button");
-      button1Delete.type = "button";
-      button1Delete.className = "btn btn-danger";
-      button1Delete.id = "deleteButton";
-      button1Delete.setAttribute("data-bs-dismiss", "modal");
-      button1Delete.textContent = "Delete";
+let div6Modal = document.createElement("div");
+div6Modal.className = "modal-footer";
+let button2Close = document.createElement("button");
+button2Close.type = "button";
+button2Close.className = "btn btn-secondary";
+button2Close.setAttribute("data-bs-dismiss", "modal");
+button2Close.textContent = "Cancel";
+let button1Delete = document.createElement("button");
+button1Delete.type = "button";
+button1Delete.className = "btn btn-danger";
+button1Delete.id = "deleteButton";
+button1Delete.setAttribute("data-bs-dismiss", "modal");
+button1Delete.textContent = "Delete";
 
-      div6Modal.appendChild(button2Close);
-      div6Modal.appendChild(button1Delete);
+div6Modal.appendChild(button2Close);
+div6Modal.appendChild(button1Delete);
 
-      div3Modal.appendChild(div4Modal);
-      div3Modal.appendChild(div5Modal);
-      div3Modal.appendChild(div6Modal);
+div3Modal.appendChild(div4Modal);
+div3Modal.appendChild(div5Modal);
+div3Modal.appendChild(div6Modal);
 
-      div2Modal.appendChild(div3Modal);
+div2Modal.appendChild(div3Modal);
 
-      div1Modal.appendChild(div2Modal);
+div1Modal.appendChild(div2Modal);
 
 let modalDiv = document.getElementById("modalDiv");
-      
-      modalDiv.appendChild(div1Modal);
 
-      
-
+modalDiv.appendChild(div1Modal);
 
 addTaskButton.addEventListener("click", function () {
   let warningTask = document.querySelector(".task-warning");
@@ -168,7 +165,7 @@ addTaskButton.addEventListener("click", function () {
       buttonDelete.setAttribute("data-bs-target", "#exampleModal2");
       buttonDelete.className = "badge btn btn-danger border-0 btn-hapus ms-3";
       buttonDelete.textContent = "Delete";
-      
+
       divSc.appendChild(buttonDelete);
 
       // Gabungkan div dan tombol ke dalam <li>
@@ -199,7 +196,6 @@ addTaskButton.addEventListener("click", function () {
 
       // Event checkbox: coret teks
       checkbox.addEventListener("change", function () {
-
         const day2 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
         const month2 = [
           "Jan",
@@ -315,15 +311,15 @@ addTaskButton.addEventListener("click", function () {
       button1Delete.addEventListener("click", function () {
         if (this.taskToDelete) {
           this.taskToDelete.remove();
-        countertask();
-        console.log(
-          "Task deleted :",
-          label.textContent,
-          ". Priority: ",
-          btnGroupChild.textContent
-        );
-      }
-    });
+          countertask();
+          // console.log(
+          //   "Task deleted :",
+          //   label.textContent,
+          //   ". Priority: ",
+          //   btnGroupChild.textContent
+          // );
+        }
+      });
 
       console.log(
         "Task added :",
