@@ -122,7 +122,6 @@ addTaskButton.addEventListener("click", function () {
       let label = document.createElement("label");
       label.textContent = inputTask.value;
       label.className = "ms-1 text-wrap";
-      label.style.width = "4px";
 
       let levelPriorityBadge = document.createElement("span");
       levelPriorityBadge.textContent = btnGroupChild.textContent;
@@ -139,7 +138,7 @@ addTaskButton.addEventListener("click", function () {
       divLabel.className = "d-flex flex-column";
       let divSubLabel = document.createElement("div");
       divSubLabel.className =
-        "d-flex flex-column flex-md-row gap-1 align-item-center align-self-center justify-content-center";
+        "d-flex flex-column flex-md-row gap-1 align-item-center";
 
       let span = document.createElement("span");
       span.className = "fst-italic fw-light ms-1 fs-7";
@@ -259,7 +258,7 @@ addTaskButton.addEventListener("click", function () {
         divLabel2.className = "d-flex flex-column";
         let divSubLabel2 = document.createElement("div");
         divSubLabel2.className =
-          "d-flex flex-column flex-md-row gap-1 align-item-center align-self-center justify-content-center";
+          "d-flex flex-column flex-md-row gap-1 align-item-center";
 
         let span2 = document.createElement("span");
         span2.className = "fst-italic fw-light ms-1 fs-7 opacity-75";
