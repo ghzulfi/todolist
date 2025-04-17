@@ -332,7 +332,7 @@ addTaskButton.addEventListener("click", function () {
       clearTask.addEventListener("click", function () {
         listTask.innerHTML = "";
         listTask2.innerHTML = "";
-        console.log("All tasks cleared");
+
         countertask();
       });
     }
